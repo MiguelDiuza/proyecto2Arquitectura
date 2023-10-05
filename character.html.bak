@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Escoge un Personaje</title>
+    <link rel="stylesheet" href="css/screen.css" />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #eee;
+      }
+
+      h1.titulo {
+        text-align: center;
+      }
+
+      .personaje {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="personaje">
+      <img src="img/perdon2.png" alt="Personaje 2" class="imagen-personaje" />
+      <h2>Estudiante</h2>
+      <button class="boton-personaje" data-personaje="Estudiante">
+        Seleccionar Estudiante
+      </button>
+    </div>
+
+    <div class="personaje">
+      <img src="/img/person3.png" alt="Personaje 3" class="imagen-personaje" />
+      <h2>Docente</h2>
+      <button class="boton-personaje" data-personaje="Docente">
+        Seleccionar Docente
+      </button>
+    </div>
+
+    <div class="personaje">
+      <img src="img/person1.png" alt="Personaje 1" class="imagen-personaje" />
+      <h2>Otro</h2>
+      <button class="boton-personaje" data-personaje="Otro">
+        Seleccionar Otro
+      </button>
+    </div>
+
+    <script>
+      // Agregamos eventos de clic a los botones
+      const botonesPersonaje = document.querySelectorAll(".boton-personaje");
+
+      botonesPersonaje.forEach((boton) => {
+        boton.addEventListener("click", () => {
+          // Obtenemos la src de la imagen del personaje desde el atributo data
+          const srcPersonaje = boton.getAttribute("data-personaje-src");
+
+          // Redirigimos a index.html con la src del personaje seleccionado como parámetro
+          window.location.href = `index.html?personajeSrc= img/person3.png`;
+        });
+      });
+    </script>
+  </body>
+</html>
