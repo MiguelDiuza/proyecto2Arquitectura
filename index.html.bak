@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cv</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100i,300,400,500,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Allura"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/screen.css" />
+  </head>
+  <body>
+    <div id="personaje-container">
+      <img id="personaje" src="img/person1.png" alt="Personaje" />
+    </div>
+
+    <!-- Modal -->
+    <div id="videoModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <iframe
+          id="videoFrame"
+          src=""
+          frameborder="0"
+          allowfullscreen
+          width="800"
+          height="450"
+        ></iframe>
+      </div>
+    </div>
+
+    <a href="character.html" class="button">Ir a Character</a>
+    <img src="img/logo.png" alt="Logo" class="logo" />
+    <header>
+      <div class="container text-center">
+        <h1>50 años entre historias</h1>
+        <p>MEMORIAS</p>
+      </div>
+    </header>
+
+    <section class="timeline">
+      <div class="container">
+        <div class="timeline-item">
+          <div class="timeline-img"></div>
+
+          <div class="timeline-content js--fadeInLeft">
+            <img class="timeline-image" src="img/010s.png" alt="Imagen 010s" />
+
+            <a
+              class="bnt-more"
+              href="javascript:void(0)"
+              data-video-src="2010.mp4"
+              >Ver</a
+            >
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-img"></div>
+
+          <div class="timeline-content js--fadeInRight">
+            <img class="timeline-image" src="img/010s.png" alt="Imagen 010s" />
+
+            <a
+              class="bnt-more"
+              href="javascript:void(0)"
+              data-video-src="20102.mp4"
+              >Ver</a
+            >
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-img"></div>
+
+          <div class="timeline-content js--fadeInLeft">
+            <img class="timeline-image" src="img/00s.png" alt="Imagen 00s" />
+
+            <a
+              class="bnt-more"
+              href="javascript:void(0)"
+              data-video-src="/2000.mp4"
+              >Ver</a
+            >
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-img"></div>
+
+          <div class="timeline-content js--fadeInRight">
+            <img class="timeline-image" src="img/00s.png" alt="Imagen 00s" />
+
+            <a
+              class="bnt-more"
+              href="javascript:void(0)"
+              data-video-src="/2000 (2).mp4"
+              >Ver</a
+            >
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-img"></div>
+
+          <div class="timeline-content js--fadeInLeft">
+            <img class="timeline-image" src="img/90s.png" alt="Imagen 90s" />
+
+            <a
+              class="bnt-more"
+              href="javascript:void(0)"
+              data-video-src="/1990.mp4"
+              >Ver</a
+            >
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-img"></div>
+
+          <div class="timeline-content js--fadeInRight">
+            <img class="timeline-image" src="img/80s.png" alt="Imagen 80s" />
+
+            <a
+              class="bnt-more"
+              href="javascript:void(0)"
+              data-video-src="/1980.mp4"
+              >Ver</a
+            >
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-img"></div>
+
+          <div class="timeline-content js--fadeInLeft">
+            <img class="timeline-image" src="img/80s.png" alt="Imagen 70s" />
+
+            <a
+              class="bnt-more"
+              href="javascript:void(0)"
+              data-video-src="/1980.mp4"
+              >Ver</a
+            >
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-img"></div>
+
+          <div class="timeline-content js--fadeInRight">
+            <img class="timeline-image" src="img/70s.png" alt="Imagen 60s" />
+
+            <a
+              class="bnt-more"
+              href="javascript:void(0)"
+              data-video-src="/1970.mp4"
+              >Ver</a
+            >
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-img"></div>
+
+          <div class="timeline-content js--fadeInLeft">
+            <img class="timeline-image" src="img/70s.png" alt="Imagen 00s" />
+
+            <a
+              class="bnt-more"
+              href="javascript:void(0)"
+              data-video-src="/1970 (2).mp4"
+              >Ver</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Leer el valor del parámetro "personajeSrc" de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const personajeSrc = urlParams.get("personajeSrc");
+
+        if (personajeSrc) {
+          // Obtener el elemento de la imagen del personaje en index.html
+          const personaje = document.getElementById("personaje");
+
+          // Actualizar la src de la imagen del personaje en index.html con la seleccionada
+          personaje.src = personajeSrc;
+          // Since you're updating the src attribute, you don't need to update the alt attribute.
+        }
+      });
+
+      // Rest of your JavaScript code (as previously provided)
+    </script>
+    <!-- partial -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
